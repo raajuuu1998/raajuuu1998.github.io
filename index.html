@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Academic Homepage</title>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    color: #222;
+    background: #fff;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+  }
+  .header img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+  .photo-placeholder {
+    width: 150px;
+    height: 180px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .header-info h1 {
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0 0 4px;
+  }
+  .header-info .title {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .header-info .affiliation {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .header-info .contact-line {
+    font-size: 14px;
+    color: #444;
+    margin: 2px 0;
+  }
+  .header-info .contact-line a {
+    color: #1a5276;
+  }
+
+  /* ── Navigation ── */
+  .nav {
+    margin-bottom: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+  }
+  .nav a {
+    color: #1a5276;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  .nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Sections ── */
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+
+  p { margin: 0 0 12px; }
+
+  /* ── News / Updates ── */
+  .news-item {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .news-date {
+    color: #777;
+    font-size: 14px;
+    display: inline-block;
+    width: 90px;
+  }
+
+  /* ── Publications ── */
+  .pub {
+    margin-bottom: 16px;
+    padding-left: 24px;
+    text-indent: -24px;
+    font-size: 15px;
+  }
+  .pub .pub-title {
+    font-style: italic;
+  }
+  .pub .pub-venue {
+    color: #555;
+  }
+  .pub a {
+    color: #1a5276;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  .pub a:hover { text-decoration: underline; }
+
+  /* ── Experience & Education ── */
+  .entry {
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+  .entry .dates {
+    color: #777;
+    font-size: 14px;
+  }
+  .entry strong {
+    font-weight: bold;
+  }
+
+  /* ── Projects ── */
+  .project {
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+  .project a {
+    color: #1a5276;
+    text-decoration: none;
+  }
+  .project a:hover { text-decoration: underline; }
+
+  /* ── Teaching ── */
+  .course {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  /* ── Links ── */
+  a { color: #1a5276; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #ccc;
+    font-size: 13px;
+    color: #999;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .header { flex-direction: column; align-items: center; text-align: center; }
+    .nav { text-align: center; }
+    .nav a { margin: 0 10px; }
+    .news-date { display: block; width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════ HEADER ══════ -->
+<div class="header">
+  <!-- Replace with: <img src="photo.jpg" alt="Your Name"> -->
+  <div class="photo-placeholder">Your Photo</div>
+  <div class="header-info">
+    <h1>Your Name</h1>
+    <div class="title">Ph.D. Candidate / Assistant Professor / Postdoctoral Researcher</div>
+    <div class="affiliation">Department of Computer Science, University Name</div>
+    <div class="contact-line">Email: <a href="mailto:your@email.com">your@email.com</a></div>
+    <div class="contact-line">Office: Building Name, Room 123</div>
+    <div class="contact-line">
+      <a href="#">Google Scholar</a> &middot;
+      <a href="#">GitHub</a> &middot;
+      <a href="#">LinkedIn</a> &middot;
+      <a href="cv.pdf">CV (PDF)</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ NAV ══════ -->
+<div class="nav">
+  <a href="#about">About</a>
+  <a href="#news">News</a>
+  <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ══════ ABOUT ══════ -->
+<div id="about">
+  <h2>About</h2>
+  <p>
+    I am a [your position] at [university/lab name], working on [your research area].
+    My research focuses on [brief description of what you do and why it matters].
+  </p>
+  <p>
+    My current work involves [describe current focus]. Previously, I worked on
+    [brief mention of past work]. I am advised by <a href="#">Prof. Name</a>.
+  </p>
+  <p>
+    <strong>Research interests:</strong> computational pathology, deep learning, domain adaptation,
+    whole slide image analysis, medical image analysis, brain tumor diagnostics.
+  </p>
+</div>
+
+<!-- ══════ NEWS ══════ -->
+<div id="news">
+  <h2>News</h2>
+  <div class="news-item"><span class="news-date">Mar 2025</span> Submitted a paper to MICCAI 2025 on robust necrosis detection in whole slide images.</div>
+  <div class="news-item"><span class="news-date">Jan 2025</span> Started a new position at [lab/organization name].</div>
+  <div class="news-item"><span class="news-date">Nov 2024</span> Presented our work on domain adaptation at [conference name].</div>
+  <div class="news-item"><span class="news-date">Sep 2024</span> Paper accepted at [journal name].</div>
+  <div class="news-item"><span class="news-date">Jun 2024</span> Received [award/fellowship name].</div>
+</div>
+
+<!-- ══════ PUBLICATIONS ══════ -->
+<div id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    [1] <strong>Your Name</strong>, Co-Author A, Co-Author B.
+    <span class="pub-title">Enhancing Robustness in Necrotic Region Identification within Whole Slide Images via Regional Analysis and Multi-Pass Grid Sampling.</span>
+    <span class="pub-venue">MICCAI 2025 (submitted).</span>
+    <a href="#">[paper]</a> <a href="#">[code]</a>
+  </div>
+
+  <div class="pub">
+    [2] <strong>Your Name</strong>, Co-Author C.
+    <span class="pub-title">DeepNucleiNet: Utilizing Domain Adaptation for Deep Learning Based Necrosis Detection in Meningioma and Glioblastoma.</span>
+    <span class="pub-venue">Diagnostics, MDPI, 2025.</span>
+    <a href="#">[paper]</a>
+  </div>
+
+  <div class="pub">
+    [3] <strong>Your Name</strong>, Co-Author D, Co-Author E.
+    <span class="pub-title">Your Third Paper Title Goes Here.</span>
+    <span class="pub-venue">Conference/Journal Name, 2023.</span>
+    <a href="#">[paper]</a> <a href="#">[code]</a>
+  </div>
+
+  <div class="pub">
+    [4] Co-Author F, <strong>Your Name</strong>, Co-Author G.
+    <span class="pub-title">Your Fourth Paper Title.</span>
+    <span class="pub-venue">Conference/Journal Name, 2022.</span>
+    <a href="#">[paper]</a>
+  </div>
+
+  <div class="pub">
+    [5] <strong>Your Name</strong>, Co-Author H.
+    <span class="pub-title">Your Fifth Paper Title.</span>
+    <span class="pub-venue">arXiv preprint, 2021.</span>
+    <a href="#">[paper]</a>
+  </div>
+</div>
+
+<!-- ══════ PROJECTS ══════ -->
+<div id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <strong>WSI Necrosis Detection Pipeline</strong> — End-to-end pipeline for detecting necrotic regions in whole slide images using domain-adaptive deep learning with multi-pass grid sampling. <a href="#">[code]</a> <a href="#">[demo]</a>
+  </div>
+
+  <div class="project">
+    <strong>Project Name Two</strong> — Brief description of what this project does and what problem it addresses. <a href="#">[code]</a>
+  </div>
+
+  <div class="project">
+    <strong>Project Name Three</strong> — Another project description. Mention the tools and what it achieves. <a href="#">[code]</a> <a href="#">[paper]</a>
+  </div>
+</div>
+
+<!-- ══════ EXPERIENCE ══════ -->
+<div id="experience">
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <strong>Your Current Role</strong>, Organization Name <br>
+    <span class="dates">2023 – present</span><br>
+    Brief description of responsibilities and focus areas.
+  </div>
+
+  <div class="entry">
+    <strong>Previous Role Title</strong>, Previous Organization <br>
+    <span class="dates">2021 – 2023</span><br>
+    What you worked on and key contributions.
+  </div>
+
+  <div class="entry">
+    <strong>Earlier Role Title</strong>, Earlier Organization <br>
+    <span class="dates">2019 – 2021</span><br>
+    Brief description.
+  </div>
+
+  <div class="entry">
+    <strong>Starting Role Title</strong>, Starting Organization <br>
+    <span class="dates">2017 – 2019</span><br>
+    Brief description.
+  </div>
+</div>
+
+<!-- ══════ TEACHING ══════ -->
+<div id="teaching">
+  <h2>Teaching</h2>
+  <div class="course"><strong>CS 101: Introduction to Computer Science</strong> — Teaching Assistant, Fall 2024</div>
+  <div class="course"><strong>CS 401: Deep Learning for Medical Imaging</strong> — Guest Lecturer, Spring 2024</div>
+  <div class="course"><strong>CS 201: Data Structures and Algorithms</strong> — Teaching Assistant, Fall 2023</div>
+</div>
+
+<!-- ══════ EDUCATION ══════ -->
+<div id="education">
+  <h2>Education</h2>
+
+  <div class="entry">
+    <strong>Ph.D. in Computer Science</strong>, University Name <br>
+    <span class="dates">2021 – 2025 (expected)</span><br>
+    Dissertation: <em>Your dissertation title here.</em> Advisor: Prof. Name.
+  </div>
+
+  <div class="entry">
+    <strong>M.Sc. in Your Field</strong>, University Name <br>
+    <span class="dates">2019 – 2021</span><br>
+    Thesis: <em>Your thesis title.</em>
+  </div>
+
+  <div class="entry">
+    <strong>B.Sc. in Your Field</strong>, University Name <br>
+    <span class="dates">2015 – 2019</span>
+  </div>
+</div>
+
+<!-- ══════ CONTACT ══════ -->
+<div id="contact">
+  <h2>Contact</h2>
+  <p>
+    The best way to reach me is by email at <a href="mailto:your@email.com">your@email.com</a>.
+  </p>
+  <p>
+    Mailing address:<br>
+    Department of Computer Science<br>
+    University Name<br>
+    Street Address<br>
+    City, Country, ZIP
+  </p>
+</div>
+
+<!-- ══════ FOOTER ══════ -->
+<div class="footer">
+  &copy; 2025 Your Name. Last updated: March 2025.
+</div>
+
+</body>
+</html>
