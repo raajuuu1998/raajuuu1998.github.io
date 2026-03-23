@@ -107,6 +107,41 @@
 
   a { color: #1a5276; }
 
+  /* ── Projects ── */
+  .project-entry {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+  .project-entry:last-child { border-bottom: none; }
+  .project-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .project-domain {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  .project-entry ul {
+    margin: 6px 0 8px 18px;
+    padding: 0;
+  }
+  .project-entry ul li {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  .project-link {
+    font-size: 13px;
+    color: #1a5276;
+    text-decoration: none;
+  }
+  .project-link:hover { text-decoration: underline; }
+
   .footer {
     margin-top: 48px; padding-top: 16px;
     border-top: 1px solid #ccc; font-size: 13px; color: #999;
@@ -122,7 +157,7 @@
 </head>
 <body>
 
-<!-- ══════ HEADER ══════ -->
+<!-- HEADER -->
 <div class="header">
   <img src="1709022939323.jpg" alt="Dasari Naga Raju">
   <div class="header-info">
@@ -138,19 +173,20 @@
   </div>
 </div>
 
-<!-- ══════ NAV ══════ -->
+<!-- NAV -->
 <div class="nav">
   <a href="#about">About</a>
   <a href="#news">News</a>
   <a href="#publications">Publications</a>
   <a href="#experience">Experience</a>
   <a href="#thesis">Thesis</a>
+  <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
   <a href="#education">Education</a>
   <a href="#awards">Awards</a>
 </div>
 
-<!-- ══════ ABOUT ══════ -->
+<!-- ABOUT -->
 <div id="about">
   <h2>About</h2>
   <p>
@@ -164,7 +200,7 @@
   </p>
 </div>
 
-<!-- ══════ NEWS ══════ -->
+<!-- NEWS -->
 <div id="news">
   <h2>News</h2>
   <div class="news-item"><span class="news-date">Feb 2025</span> Started as Research Assistant at the Medical College of Wisconsin, working on EEG analysis.</div>
@@ -173,13 +209,13 @@
   <div class="news-item"><span class="news-date">2025</span> Deployed <a href="https://stratusembai.com">stratusembai.com</a> — a full-stack automated EEG analysis platform.</div>
 </div>
 
-<!-- ══════ PUBLICATIONS ══════ -->
+<!-- PUBLICATIONS -->
 <div id="publications">
   <h2>Publications</h2>
   <p><em>Coming soon.</em></p>
 </div>
 
-<!-- ══════ EXPERIENCE ══════ -->
+<!-- EXPERIENCE -->
 <div id="experience">
   <h2>Research Experience</h2>
 
@@ -213,7 +249,7 @@
   </div>
 </div>
 
-<!-- ══════ THESIS ══════ -->
+<!-- THESIS -->
 <div id="thesis">
   <h2>Master's Thesis</h2>
   <p>
@@ -224,7 +260,112 @@
   </p>
 </div>
 
-<!-- ══════ SKILLS ══════ -->
+<!-- PROJECTS -->
+<div id="projects">
+  <h2>Selected Projects</h2>
+
+  <div class="project-entry">
+    <div class="project-title">Vision Transformer and XceptionNet Fusion for Alzheimer's Dementia Staging from Structural MRI</div>
+    <div class="project-domain">Neuroimaging · Deep Learning</div>
+    <ul>
+      <li>Benchmarked three architectures — XceptionNet, a custom Vision Transformer (ViT) with 16×16 patch embeddings, and an XceptionNet + Transformer hybrid — for Alzheimer's dementia staging across four classes (Non-Demented, Very Mild, Mild, Moderate Demented).</li>
+      <li>Trained on 69,148 MRI images with class-weight balancing to handle severe label imbalance; evaluated on 17,289 held-out images.</li>
+      <li>Implemented multi-head self-attention (4 heads, projection dim 64) fused with Xception feature maps for the hybrid model.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1i7ehbLaAweB-jcylSoYXXUJqIBEQMpVT?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Transformer-Based Cuffless Blood Pressure Estimation from Multimodal Biosignals with Clinical Benchmarking</div>
+    <div class="project-domain">Cardiology · Biosignal Processing</div>
+    <ul>
+      <li>Built a Transformer-based blood pressure prediction model (multi-head attention, 4 heads, 50 epochs) trained on ECG, PPG, VPG, and APG signals extracted from 38 real patient folders in the Cabrini 2017 dataset.</li>
+      <li>Applied Butterworth low-pass filtering (cutoff 5 Hz, fs 1000 Hz) for signal preprocessing; evaluated all variants using clinical BHS grading criteria (MAE, RMSE, R²).</li>
+      <li>Benchmarked against 10 classical regressors including XGBoost, Random Forest, AdaBoost, and Linear Regression; Transformer achieved val MAE of ~2.97 mmHg by epoch 3.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1KHXrECwDm1ejCroxDFBkCKZXNK1pkSqm?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Multi-Horizon Glucose Forecasting and Complication Prediction in Type 1 Diabetes from Wearable Sensor Data</div>
+    <div class="project-domain">Endocrinology · Time-Series Forecasting</div>
+    <ul>
+      <li>Performed multi-horizon glucose forecasting (5, 10, 30 minutes ahead) using the D1NAMO dataset of real diabetic patients, integrating continuous glucose monitoring, ECG, breathing rate, and accelerometer signals.</li>
+      <li>Compared LSTM+GRU, standalone LSTM, GRU, and CNN-LSTM architectures; GRU achieved the best result with RMSE 0.705 and MAE 0.391.</li>
+      <li>Classified glucose-related complications (Hypoglycemia, Prediabetes, Mild/Moderate Hyperglycemia) using SVM, achieving 99.19% accuracy and F1-score.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1wn49ewPu73MtgGpzODmm1NVHuFuQS2So?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Automated Cancer Cell Phenotyping via Morphological Feature Engineering and Ensemble Classification</div>
+    <div class="project-domain">Computational Pathology · Medical Image Analysis</div>
+    <ul>
+      <li>Extracted 34 hand-crafted features per cell from 97,100 high-resolution TIFF microscopy images, including GLCM texture features (contrast, correlation, energy), Local Binary Patterns, Sobel edge responses, and statistical moments.</li>
+      <li>Trained a Random Forest classifier with SMOTE oversampling and 5-fold cross-validation, achieving 95.5% accuracy, 97.0% precision, and 97.6% F1-score on multi/single cancer cell classification.</li>
+      <li>Developed a full end-to-end inference pipeline (supervised + unsupervised K-Means clustering) saved with joblib for deployment on unseen cell images.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1IMMd_SVUqZ1GIHCBGswaGze0kQQ6ULQ6?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">CNN-BiLSTM with Multi-Head Attention for Acoustic Depression Detection from Clinical Interview Speech</div>
+    <div class="project-domain">Mental Health AI · Speech Processing</div>
+    <ul>
+      <li>Processed 275 clinical interview recordings from the DAIC-WOZ dataset (USC), applying silence removal and speech segmentation to retain patient-only speech, then extracted 64-band Mel spectrograms using 3-second sliding windows at 16 kHz.</li>
+      <li>Designed and trained RBAFEModel — a custom architecture combining CNN (2× Conv2D + BatchNorm), Bi-LSTM, and Multi-Head Self-Attention — for binary depression classification (depressed vs. non-depressed).</li>
+      <li>Split 275 patients into train/dev/test (163/56/56); model trained for 20 epochs using PyTorch with BCE loss and Adam optimizer (lr=1e-4), achieving 78.8% training accuracy.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1vGV3daS3lOWC3UPvtFS5XeVrJ_keLm1p?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Multi-Architecture Deep Learning for Root Canal Morphology Classification in Periapical Radiographs</div>
+    <div class="project-domain">Dental AI · Medical Imaging</div>
+    <ul>
+      <li>Curated a dataset of 333 annotated dental X-ray images across 5 annotation folders for 4-class root canal type classification; built a dual-input CNN processing both original X-rays and segmentation masks simultaneously.</li>
+      <li>Benchmarked seven architectures — dual-input CNN, plain CNN, ResNet50, VGG16, EfficientNetB5, InceptionV3, and MobileNetV2 — all trained with transfer learning (ImageNet weights, frozen base) for 50 epochs.</li>
+      <li>InceptionV3 achieved the highest validation accuracy of 81.5% by the first epoch; VGG16 reached 77.8% validation accuracy by epoch 3.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1pMrtlxvZAWU-4XdKrpvqNHBUMzWbEBuY?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">EEG-to-Audio Reconstruction via Deep Convolutional Networks for Auditory Cognitive Decoding</div>
+    <div class="project-domain">Neuroscience · EEG Signal Processing</div>
+    <ul>
+      <li>Reconstructed audio/music stimuli from raw 14-channel EEG brainwave signals (Emotiv headset) using the NMED-T (Naturalistic Music EEG Dataset – Tempo) and a custom EEG-audio paired dataset.</li>
+      <li>Designed a CNN-based EEG_Audio_Reconstructor model with Conv2D, BatchNormalization, and Dropout layers, trained with Adam (lr=0.0015) using MSE loss for 200 epochs; achieved training MSE of 0.083.</li>
+      <li>Applied MinMaxScaler and StandardScaler preprocessing across 2,295 segmented EEG windows aligned to corresponding Mel spectrogram frames (128×160) extracted via Librosa.</li>
+    </ul>
+    <a class="project-link" href="https://colab.research.google.com/drive/1eXZ3DlGAxcVnY6UV7_wiQNdE9pIIX4al?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Breast Cancer Histological Subtype Classification Using Colour Texture Features on the BreaKHis Dataset</div>
+    <div class="project-domain">Computational Pathology · Oncology</div>
+    <ul>
+      <li>Classified breast tissue histology slides from the BreaKHis v1 dataset into five subtypes (Adenosis, Ductal Carcinoma, Fibroadenoma, Lobular Carcinoma, Mucinous Carcinoma) using colour histogram feature extraction (RGB, 256 bins per channel, 768 features per image).</li>
+      <li>Compared Random Forest (200 trees), SVM, and Gradient Boosting; Random Forest achieved the best result with 5-fold cross-validated accuracy of 76.7–82.5% and hold-out test accuracy of 77%.</li>
+      <li>Demonstrated the discriminative power of low-level colour statistics as a lightweight baseline prior to deep feature extraction.</li>
+    </ul>
+    <a class="project-link" href="https://drive.google.com/file/d/1BufDQ_GsTaxHxCpP71t1BJ7M7Xy43BrK/view?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title">Deep Learning for Malignant Melanoma Detection from Dermoscopy Images — SIIM-ISIC Challenge</div>
+    <div class="project-domain">Dermatology AI · Medical Imaging</div>
+    <ul>
+      <li>Set up a Kaggle competition pipeline for malignant melanoma detection from dermoscopy skin lesion images using the SIIM-ISIC 2020 dataset.</li>
+      <li>Implemented automated data ingestion using the Kaggle API to download and organise ISIC dermoscopy images (JPEG) for model training.</li>
+      <li>Ongoing work towards training a deep CNN-based binary classifier for benign vs. malignant skin lesion detection.</li>
+    </ul>
+    <a class="project-link" href="https://drive.google.com/file/d/1VXnwpxnNmMcvDvMVo2309hBnBhukXO4t/view?usp=sharing" target="_blank">[Notebook]</a>
+  </div>
+
+</div>
+
+<!-- SKILLS -->
 <div id="skills">
   <h2>Technical Skills</h2>
   <table class="skills-table">
@@ -236,7 +377,7 @@
   </table>
 </div>
 
-<!-- ══════ EDUCATION ══════ -->
+<!-- EDUCATION -->
 <div id="education">
   <h2>Education</h2>
 
@@ -252,7 +393,7 @@
   </div>
 </div>
 
-<!-- ══════ AWARDS ══════ -->
+<!-- AWARDS -->
 <div id="awards">
   <h2>Awards &amp; Recognition</h2>
   <div class="award"><strong>3rd of 1,743</strong> — Realme Mobiles Pysa UPI Hackathon (NPCI, Mar 2020): UPI Fraud Detection with Text Analysis.</div>
@@ -261,7 +402,7 @@
   <div class="award"><strong>4th of 900</strong> — Railway Accident Prevention Hackathon (Texas Instruments, India).</div>
 </div>
 
-<!-- ══════ FOOTER ══════ -->
+<!-- FOOTER -->
 <div class="footer">
   &copy; 2025 Dasari Naga Raju. Last updated: March 2025.
 </div>
