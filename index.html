@@ -51,6 +51,14 @@
       padding: 58px 0 34px;
     }
 
+    .profile-left {
+      width: 165px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5cm;
+    }
+
     .portrait {
       width: 160px;
       height: 160px;
@@ -89,17 +97,13 @@
       color: #30343a;
     }
 
-    .research-interests {
-      margin-top: 14px;
-      font-size: 15px;
-      color: #3f444a;
-    }
-
     .socials {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-top: 17px;
+      justify-content: center;
+      gap: 13px;
+      margin-top: 14px;
+      width: 100%;
     }
 
     .socials a {
@@ -124,6 +128,24 @@
       height: 20px;
       fill: currentColor;
     }
+
+    .socials .cv-text-link {
+      width: auto;
+      height: auto;
+      padding: 2px 4px;
+      border-radius: 0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      color: #454a50;
+    }
+
+    .socials .cv-text-link:hover {
+      background: transparent;
+      color: var(--link);
+      text-decoration: underline;
+    }
+
 
     /* =========================================================
        NAV TABS
@@ -173,7 +195,7 @@
 
     main {
       min-height: 470px;
-      padding-bottom: 44px;
+      padding: 8px 0 44px;
     }
 
     .tab-panel {
@@ -188,19 +210,30 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    h2.section-title {
-      margin: 0 0 20px;
-      padding-bottom: 9px;
-      border-bottom: 1px solid var(--line);
-      font-size: 26px;
-      line-height: 1.3;
-      letter-spacing: -0.2px;
-    }
-
     h3 {
       margin: 30px 0 12px;
       font-size: 19px;
       line-height: 1.35;
+    }
+
+
+    /* Current Research */
+    .research-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-item:last-child { border-bottom: 0; }
+
+    .research-item h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+
+    .research-item p {
+      margin: 0;
+      color: #343a40;
+      max-width: 850px;
     }
 
     /* Publications */
@@ -242,20 +275,27 @@
     .pub-links a { margin-right: 12px; }
 
     /* News */
-    .news-item {
-      display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 12px;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
+    .news-list {
+      margin: 0;
+      padding-left: 30px;
+      list-style-type: square;
     }
 
-    .news-item:last-child { border-bottom: 0; }
+    .news-list li {
+      margin: 10px 0;
+      padding-left: 3px;
+      line-height: 1.55;
+      color: #202124;
+    }
 
-    .news-date {
-      color: var(--muted);
-      font-size: 14px;
+    .news-date-inline {
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      margin-right: 7px;
+    }
+
+    .news-list em {
+      font-style: normal;
     }
 
     /* Experience + Education */
@@ -311,6 +351,11 @@
         padding-top: 36px;
       }
 
+      .profile-left {
+        width: auto;
+        margin-top: 0.6cm;
+      }
+
       .portrait {
         width: 138px;
         height: 138px;
@@ -352,37 +397,10 @@
          Right: name, role, location, about text, social icons
          ======================================================= -->
     <header class="profile">
-      <img class="portrait" src="1709022939323.jpg" alt="Dasari Naga Raju" />
+      <div class="profile-left">
+        <img class="portrait" src="1709022939323.jpg" alt="Dasari Naga Raju" />
 
-      <div class="profile-content">
-        <h1>Dasari Naga Raju</h1>
-        <p class="role">Independent Computational Pathology Researcher</p>
-        <p class="location">Andhra Pradesh, India</p>
-
-        <div class="bio">
-          <p>
-            I am an independent computational pathology researcher from India. My research focuses on
-            developing machine-learning methods that extract clinically relevant information from
-            histopathology whole-slide images, with particular emphasis on pathology foundation models,
-            weakly supervised learning, biological representation learning, and robust biomarker and
-            clinical outcome prediction.
-          </p>
-
-          <p>
-            My work investigates how morphological and spatial biological information can improve the
-            generalization, interpretability, and clinical relevance of computational pathology systems
-            across heterogeneous patient cohorts and disease settings.
-          </p>
-
-          <p class="research-interests">
-            <strong>Research interests:</strong>
-            Computational Pathology · Pathology Foundation Models · Multiple Instance Learning ·
-            Representation Learning · Spatial Tumor Microenvironment · Molecular Biomarker Prediction ·
-            Clinical Outcome Modeling
-          </p>
-        </div>
-
-        <!-- Email / GitHub / LinkedIn icons -->
+        <!-- Profile links shown directly under the image -->
         <div class="socials" aria-label="Contact and social links">
 
           <a href="mailto:raajuuu1998@gmail.com" aria-label="Email" title="Email">
@@ -403,30 +421,94 @@
             </svg>
           </a>
 
+          <!-- CV: replace the Google Drive URL below with your exact CV link -->
+          <a class="cv-text-link"
+             href="https://drive.google.com/file/d/EXAMPLE_CV_FILE_ID/view?usp=sharing"
+             target="_blank" rel="noopener" aria-label="CV" title="CV">CV</a>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h1>Dasari Naga Raju</h1>
+        <p class="role">Independent Computational Pathology Researcher</p>
+        <p class="location">Andhra Pradesh, India</p>
+
+        <div class="bio">
+          <p>
+            I am an independent computational pathology researcher from India. My research focuses on
+            developing machine-learning methods that extract clinically relevant information from
+            histopathology whole-slide images, with particular emphasis on pathology foundation models,
+            weakly supervised learning, biological representation learning, and robust biomarker and
+            clinical outcome prediction.
+          </p>
+
+          <p>
+            My work investigates how morphological and spatial biological information can improve the
+            generalization, interpretability, and clinical relevance of computational pathology systems
+            across heterogeneous patient cohorts and disease settings.
+          </p>
         </div>
       </div>
     </header>
 
     <!-- =======================================================
-         ONLY 3 TABS
+         ONLY 3 TABS: NEWS, CURRENT RESEARCH, PUBLICATIONS
          ======================================================= -->
     <div class="tabs-wrap">
       <nav class="tabs" aria-label="Primary navigation">
-        <button class="tab-button active" data-tab="publications">Publications</button>
-        <button class="tab-button" data-tab="news">News</button>
-        <button class="tab-button" data-tab="experience">Experience &amp; Education</button>
+        <button class="tab-button active" data-tab="news">News</button>
+        <button class="tab-button" data-tab="research">Current Research</button>
+        <button class="tab-button" data-tab="publications">Publications</button>
       </nav>
     </div>
 
     <main>
 
+
+      <!-- =====================================================
+           CURRENT RESEARCH
+           ===================================================== -->
+      <section id="research" class="tab-panel">
+<div class="research-item">
+          <h3>Pathology Foundation Models</h3>
+          <p>
+            I study how pretrained pathology foundation models encode morphological and biological
+            information in histopathology whole-slide images, with emphasis on clinically relevant
+            representations and generalization across patient cohorts.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Weakly Supervised Learning for Whole-Slide Images</h3>
+          <p>
+            I develop multiple-instance learning approaches for learning from slide- and patient-level
+            labels without dense region annotations, with particular interest in robust aggregation
+            and interpretable tissue representations.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Biologically Informed Representation Learning</h3>
+          <p>
+            My work explores how spatial tumor-microenvironment information and biologically grounded
+            descriptors can complement morphology learned by pathology foundation models.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Molecular Biomarker and Clinical Outcome Prediction</h3>
+          <p>
+            I investigate computational pathology methods for predicting molecular phenotypes and
+            clinically relevant outcomes directly from routine H&amp;E histology.
+          </p>
+        </div>
+      </section>
+
       <!-- =====================================================
            PUBLICATIONS
            ===================================================== -->
-      <section id="publications" class="tab-panel active">
-        <h2 class="section-title">Publications</h2>
-
-        <h3>2026</h3>
+      <section id="publications" class="tab-panel">
+<h3>2026</h3>
 
         <ol class="pub-list">
 
@@ -512,142 +594,44 @@
       <!-- =====================================================
            NEWS
            ===================================================== -->
-      <section id="news" class="tab-panel">
-        <h2 class="section-title">News</h2>
+      <section id="news" class="tab-panel active">
+<ul class="news-list">
+          <li>
+            <span class="news-date-inline">(05.09.2026)</span>
+            Paper <em>“What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?”</em>
+            scheduled for a poster presentation at MICCAI 2026 COMPAYL.
+          </li>
 
-        <div class="news-item">
-          <div class="news-date">Sep 2026</div>
-          <div>
-            <em>What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?</em>
-            was assigned a poster presentation at MICCAI 2026 COMPAYL.
-          </div>
-        </div>
+          <li>
+            <span class="news-date-inline">(27.07.2026)</span>
+            Paper <em>“Conserved Immune Topology Improves Pathology Foundation Model Generalization for Cross-Cancer MSI-H Prediction”</em>
+            accepted at ECCV 2026 MedFMB.
+          </li>
 
-        <div class="news-item">
-          <div class="news-date">2026</div>
-          <div>
-            <em>Conserved Immune Topology Improves Pathology Foundation Model Generalization
-            for Cross-Cancer MSI-H Prediction</em> accepted at ECCV 2026 MedFMB.
-          </div>
-        </div>
-
-        <div class="news-item">
-          <div class="news-date">2026</div>
-          <div>
-            <em>What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?</em>
+          <li>
+            <span class="news-date-inline">(14.07.2026)</span>
+            Paper <em>“What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?”</em>
             accepted at MICCAI 2026 COMPAYL.
-          </div>
-        </div>
+          </li>
 
-        <div class="news-item">
-          <div class="news-date">2026</div>
-          <div>
-            <em>DeepNucleiNet</em> accepted at the MICCAI 2026 BrainWorks workshop.
-          </div>
-        </div>
+          <li>
+            <span class="news-date-inline">(06.07.2026)</span>
+            Paper <em>“DeepNucleiNet: Encoding Spatial Nuclear Patterns for Data-Efficient Necrosis Detection in Computational Neuropathology”</em>
+            accepted at MICCAI 2026 BrainWorks.
+          </li>
 
-        <div class="news-item">
-          <div class="news-date">2026</div>
-          <div>
-            Additional collaborative work accepted at MICCAI 2026 SafeSurg, MICCAI 2026 CREATE,
-            and the ECCV 2026 ABAW workshop.
-          </div>
-        </div>
+          <li>
+            <span class="news-date-inline">(02.07.2026)</span>
+            Collaborative work accepted at MICCAI 2026 SafeSurg.
+          </li>
+
+          <li>
+            <span class="news-date-inline">(29.06.2026)</span>
+            Collaborative work accepted at MICCAI 2026 CREATE and ECCV 2026 ABAW.
+          </li>
+        </ul>
       </section>
 
-      <!-- =====================================================
-           EXPERIENCE + EDUCATION
-           ===================================================== -->
-      <section id="experience" class="tab-panel">
-        <h2 class="section-title">Experience &amp; Education</h2>
-
-        <h3>Research Experience</h3>
-
-        <div class="entry">
-          <div class="entry-date">Feb 2025 – Present</div>
-          <div>
-            <div class="entry-title">Project Scientist (Contract)</div>
-            <div class="entry-org">Medical College of Wisconsin · Remote</div>
-            <div class="entry-text">
-              Developing AI methods for seizure detection across multiple hospital sites with a focus
-              on robust cross-site generalization.
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date">Aug 2024 – Jan 2025</div>
-          <div>
-            <div class="entry-title">Research Associate</div>
-            <div class="entry-org">MINRO Lab, IIIT Bangalore</div>
-            <div class="entry-text">
-              Computational pathology research on whole-slide image analysis, cross-cohort validation,
-              and domain-generalizable necrosis detection.
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date">Sep 2021 – Aug 2022</div>
-          <div>
-            <div class="entry-title">Clinical Data Collaborator</div>
-            <div class="entry-org">NIMHANS Hospital × IIIT Bangalore</div>
-            <div class="entry-text">
-              Worked with neuropathology whole-slide images, annotation workflows, tissue regions of
-              interest, and clinically grounded histopathology interpretation.
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date">Oct 2020 – Aug 2021</div>
-          <div>
-            <div class="entry-title">Research Associate</div>
-            <div class="entry-org">Mirai Research Innovation Institute, Japan</div>
-            <div class="entry-text">
-              Developed deep-learning methods for automated visual defect detection in digitized
-              electronic-component imagery.
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date">Oct 2019 – Sep 2020</div>
-          <div>
-            <div class="entry-title">Undergraduate Research Assistant</div>
-            <div class="entry-org">JNTU Vizianagaram</div>
-            <div class="entry-text">
-              Developed convolutional neural-network methods for nighttime vehicle classification.
-            </div>
-          </div>
-        </div>
-
-        <h3>Education</h3>
-
-        <div class="entry">
-          <div class="entry-date">2021 – 2024</div>
-          <div>
-            <div class="entry-title">M.S. by Research</div>
-            <div class="entry-org">IIIT Bangalore, India</div>
-            <div class="entry-text">
-              Research work focused on computational pathology.
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date">2016 – 2020</div>
-          <div>
-            <div class="entry-title">B.Tech.</div>
-            <div class="entry-org">
-              Jawaharlal Nehru Technological University Gurajada, Vizianagaram, India
-            </div>
-            <div class="entry-text">
-              Electronics and Communication Engineering.
-            </div>
-          </div>
-        </div>
-      </section>
 
     </main>
 
