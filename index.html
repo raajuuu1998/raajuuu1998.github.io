@@ -151,6 +151,25 @@
       fill: currentColor;
     }
 
+
+    .project-profile-link {
+      margin-top: 10px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .project-profile-link a {
+      color: var(--link);
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .project-profile-link a:hover {
+      color: #124a8a;
+    }
+
     /* =========================================================
        NAV TABS
        Current Research removed completely.
@@ -277,6 +296,19 @@
     }
 
     .pub-links a { margin-right: 12px; }
+
+
+    .venue-highlight {
+      color: #1a5fb4;
+      font-weight: 650;
+    }
+
+    .pub-status {
+      color: #6b7280;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 6px;
+    }
 
     /* News */
     .news-list {
@@ -457,6 +489,10 @@
             </a>
 
           </div>
+
+          <div class="project-profile-link">
+            <a href="https://raajuuu1998.github.io/Project-TARAA/" target="_blank" rel="noopener">Project TARAA</a>
+          </div>
         </div>
       </div>
 
@@ -478,10 +514,6 @@
   information can be used to build more biologically grounded and generalizable pathology models.
   I am particularly interested in representation learning across cancer types and cohorts, and in
   identifying histological signals that complement established clinical and pathological variables.
-</p>
-
-          <p>
-  I am currently seeking PhD opportunities in computational pathology and medical AI.
 </p>
           
         </div>
@@ -537,6 +569,7 @@
       <section id="publications" class="tab-panel">
 
         <ol class="pub-list">
+
           <li class="pub">
             <div class="pub-title">
               <em>Conserved Immune Topology Improves Pathology Foundation Model Generalization for Cross-Cancer MSI-H Prediction</em>
@@ -546,12 +579,93 @@
             </div>
             <div class="pub-venue">
               ECCV 2026 Workshop on Medical Foundation Models and Benchmarks (MedFMB)
+              <span class="pub-status">Accepted</span>
             </div>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2609.05182" target="_blank" rel="noopener">[Paper]</a>
               <a href="https://github.com/raajuuu1998/cit_msih" target="_blank" rel="noopener">[Code]</a>
+              <a href="https://raajuuu1998.github.io/Project-TARAA/posters/ECCV2026_MEDFMB.pdf" target="_blank" rel="noopener">[Poster]</a>
             </div>
           </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              <em>What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?</em>
+            </div>
+            <div class="pub-authors">
+              <strong>Dasari Naga Raju</strong>
+            </div>
+            <div class="pub-venue">
+              MICCAI 2026 Workshop on Computational Pathology with Multimodal Data (COMPAYL)
+              <span class="pub-status">Accepted for Poster Presentation</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://papers.miccai.org/miccai-2026-sat/paper/COMPAYL_032.pdf" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/raajuuu1998/gd_mil" target="_blank" rel="noopener">[Code]</a>
+              <a href="https://raajuuu1998.github.io/Project-TARAA/posters/MICCAI2026_COMPAYL.pdf" target="_blank" rel="noopener">[Poster]</a>
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              <em>DeepNucleiNet: Encoding Spatial Nuclear Patterns for Data-Efficient Necrosis Detection in Computational Neuropathology</em>
+            </div>
+            <div class="pub-authors">
+              <strong>Dasari Naga Raju</strong>, T. K. Srikanth, Shilpa Rao, Ramesh Kestur, Mahadevan A
+            </div>
+            <div class="pub-venue">
+              MICCAI 2026 The Brain Abnormality Workshop (BrainWorks)
+              <span class="pub-status">Accepted</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://papers.miccai.org/miccai-2026-sat/paper/BrainWorks_033.pdf" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/raajuuu1998/DeepNucleiNet" target="_blank" rel="noopener">[Code]</a>
+              <a href="https://raajuuu1998.github.io/Project-TARAA/posters/MICCAI2026_BrainWorks.pdf" target="_blank" rel="noopener">[Poster]</a>
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              <em>Self-Supervised Denoising Reconstruction Outperforms Foundation Models for Capsule Endoscopy Abnormality Classification</em>
+            </div>
+            <div class="pub-authors">
+              Vamshi Krishna Kancharla, <strong>Dasari Naga Raju</strong>, Kaveti Pavan Kumar
+            </div>
+            <div class="pub-venue">
+              MICCAI 2026 Workshop on AI for Safe Surgery (SafeSurg)
+              <span class="pub-status">Accepted</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              <em>Surgical Foundation Model Ensembles for Predicting Annotator Disagreement in Critical View of Safety Assessments</em>
+            </div>
+            <div class="pub-authors">
+              <strong>Dasari Naga Raju</strong>, Vamshi Krishna Kancharla, Kaveti Pavan Kumar
+            </div>
+            <div class="pub-venue">
+              MICCAI 2026 Clinical-driven Robotics and Embodied AI Technology (CREATE)
+              <span class="pub-status">Accepted</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://papers.miccai.org/miccai-2026-sat/paper/CREATE_007.pdf" target="_blank" rel="noopener">[Paper]</a>
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              <em>Weave Before You Weigh: Interleaved Head Attention for Multimodal Physiological Stress Recognition in the Wild</em>
+            </div>
+            <div class="pub-authors">
+              Vamshi Krishna Kancharla, <strong>Dasari Naga Raju</strong>, Kaveti Pavan Kumar
+            </div>
+            <div class="pub-venue">
+              ECCV 2026 11th Workshop and Competition on Affective &amp; Behavior Analysis in-the-wild (ABAW)
+              <span class="pub-status">Accepted</span>
+            </div>
+          </li>
+
         </ol>
 
       </section>
@@ -560,42 +674,67 @@
            NEWS
            ===================================================== -->
       <section id="news" class="tab-panel active">
-<ul class="news-list">
+        <ul class="news-list">
+
           <li>
-            <span class="news-date-inline">(05.09.2026)</span>
-            Paper <em>“What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?”</em>
-            scheduled for a poster presentation at MICCAI 2026 COMPAYL.
+            <span class="news-date-inline">(24.09.2026)</span>
+            Launched
+            <a href="https://raajuuu1998.github.io/Project-TARAA/" target="_blank" rel="noopener"><strong>Project TARAA</strong></a>
+            (<strong>Tissue-Aware Representation Adaptation Across Cancers</strong>), an independent research project in computational pathology focused on cross-cancer representation learning and biomarker prediction.
           </li>
 
           <li>
-            <span class="news-date-inline">(27.07.2026)</span>
-            Paper <em>“Conserved Immune Topology Improves Pathology Foundation Model Generalization for Cross-Cancer MSI-H Prediction”</em>
-            accepted at ECCV 2026 MedFMB.
+            <span class="news-date-inline">(29.07.2026)</span>
+            Our paper
+            <em>“Weave Before You Weigh: Interleaved Head Attention for Multimodal Physiological Stress Recognition in the Wild”</em>
+            has been accepted at the
+            <span class="venue-highlight">ECCV 2026 11th Workshop and Competition on Affective &amp; Behavior Analysis in-the-wild (ABAW)</span>.
+          </li>
+
+          <li>
+            <span class="news-date-inline">(16.07.2026)</span>
+            My independent research paper
+            <em>“Conserved Immune Topology Improves Pathology Foundation Model Generalization for Cross-Cancer MSI-H Prediction”</em>
+            has been accepted for poster presentation at the
+            <span class="venue-highlight">ECCV 2026 Workshop on Medical Foundation Models and Benchmarks (MedFMB)</span>.
           </li>
 
           <li>
             <span class="news-date-inline">(14.07.2026)</span>
-            Paper <em>“What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?”</em>
-            accepted at MICCAI 2026 COMPAYL.
+            My independent research paper
+            <em>“What Do Pathology Foundation Models Learn Beyond Gleason Grade in Prostate Cancer?”</em>
+            has been accepted for poster presentation at the
+            <span class="venue-highlight">MICCAI 2026 Workshop on Computational Pathology with Multimodal Data (COMPAYL)</span>.
           </li>
 
           <li>
             <span class="news-date-inline">(06.07.2026)</span>
-            Paper <em>“DeepNucleiNet: Encoding Spatial Nuclear Patterns for Data-Efficient Necrosis Detection in Computational Neuropathology”</em>
-            accepted at MICCAI 2026 BrainWorks.
+            Our paper
+            <em>“DeepNucleiNet: Encoding Spatial Nuclear Patterns for Data-Efficient Necrosis Detection in Computational Neuropathology”</em>
+            has been accepted at the
+            <span class="venue-highlight">MICCAI 2026 The Brain Abnormality Workshop (BrainWorks)</span>.
           </li>
 
           <li>
             <span class="news-date-inline">(02.07.2026)</span>
-            Collaborative work accepted at MICCAI 2026 SafeSurg.
+            Our paper
+            <em>“Self-Supervised Denoising Reconstruction Outperforms Foundation Models for Capsule Endoscopy Abnormality Classification”</em>
+            has been accepted at the
+            <span class="venue-highlight">MICCAI 2026 Workshop on AI for Safe Surgery (SafeSurg)</span>.
           </li>
 
           <li>
             <span class="news-date-inline">(29.06.2026)</span>
-            Collaborative work accepted at MICCAI 2026 CREATE and ECCV 2026 ABAW.
+            Our paper
+            <em>“Surgical Foundation Model Ensembles for Predicting Annotator Disagreement in Critical View of Safety Assessments”</em>
+            has been accepted at the
+            <span class="venue-highlight">MICCAI 2026 Clinical-driven Robotics and Embodied AI Technology (CREATE)</span>.
           </li>
+
         </ul>
       </section>
+
+
 
 
     </main>
