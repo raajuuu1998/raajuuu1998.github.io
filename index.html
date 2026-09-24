@@ -112,12 +112,15 @@
     .cv-text-link {
       font-size: 15px;
       font-weight: 600;
-      color: #454a50;
+      color: var(--link);
       letter-spacing: 0.1px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .cv-text-link:hover {
-      color: var(--link);
+      color: #124a8a;
+      text-decoration: underline;
     }
 
     .socials {
@@ -443,7 +446,7 @@
           <div class="cv-row">
             <!-- Replace the placeholder Google Drive URL below with your exact CV link -->
             <a class="cv-text-link"
-               href="https://drive.google.com/file/d/EXAMPLE_CV_FILE_ID/view?usp=sharing"
+               href="cv.pdf"
                target="_blank" rel="noopener" aria-label="CV" title="CV">CV</a>
           </div>
 
@@ -526,8 +529,8 @@
     <div class="tabs-wrap">
       <nav class="tabs" aria-label="Primary navigation">
         <button class="tab-button active" data-tab="news">Recent News</button>
-        <button class="tab-button" data-tab="research">Current Research</button>
         <button class="tab-button" data-tab="publications">Publications</button>
+        <button class="tab-button" data-tab="research">Current Research</button>
       </nav>
     </div>
 
@@ -679,7 +682,7 @@
           <li>
             <span class="news-date-inline">(24.09.2026)</span>
             Launched
-            <a href="https://raajuuu1998.github.io/Project-TARAA/" target="_blank" rel="noopener"><strong>Project TARAA</strong></a>
+            <a href="https://raajuuu1998.github.io/Project-TARAA/" target="_blank" rel="noopener" style="text-decoration: underline; text-underline-offset: 3px;"><strong>Project TARAA</strong></a>
             (<strong>Tissue-Aware Representation Adaptation Across Cancers</strong>), an independent research project in computational pathology focused on cross-cancer representation learning and biomarker prediction.
           </li>
 
